@@ -1,0 +1,10 @@
+;; This init file for rust programing
+
+(use-package rustic
+  :ensure t
+  :init
+  (setq rustic-lisp-server 'rust-analyzer)
+  (setq rustic-flycheck-setup-mode-line-p nil)
+  :hook ((rustic-mode . (lambda ()
+			  (company-mode)))))
+(provide 'init-rust)
